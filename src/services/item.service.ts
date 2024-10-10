@@ -11,11 +11,11 @@ export class ItemService {
   ) {}
 
   async findAll(): Promise<Item[]> {
-    return this.itemRepository.find(); // Retorna todos os itens
+    return this.itemRepository.find();
   }
 
   async create(itemDto: Partial<Item>): Promise<Item> {
-    const item = this.itemRepository.create(itemDto); // Cria um novo item
-    return this.itemRepository.save(item); // Salva no banco
+    const item = this.itemRepository.create(itemDto);
+    return this.itemRepository.save(item);
   }
 }
